@@ -197,7 +197,7 @@ node_t* listPopIn(linklist_t* list, double val, int index){
 
 node_t* listReplace(linklist_t* list, double val, int index){
 	node_t* indexNode = listGet(list, index);	//just gets the pointer to the node from listGet and changes the value
-	if(!indexNode) error("");
+	if(!indexNode) return error("");
 	
 	indexNode->value = val;
 	return indexNode;
@@ -230,7 +230,7 @@ int deleteNode(linklist_t* list, int index){
 
 int resize(linklist_t* list, int newSize){
 	int offset = newSize - list->size; //calculates how many items we need to add/delete
-	if(newSize < 0) intError("size needs to be at least zero, can't resize");
+	if(newSize < 0) return intError("size needs to be at least zero, can't resize");
 	
 	if(offset == 0) return 0; //if the offset is 0 then the sizes are equal and we are done
 	

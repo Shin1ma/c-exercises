@@ -51,7 +51,7 @@ int main(){
 		printf("\n\n\nhi! please use:\n'1' to add an element to the list(pushback)\n'2' to add an element to the list(pop-in)\n");
 		printf("'3' to replace an element\n'4' to delete an element\n'5' to resize the list\ntype exit to exit\n\n");
 		printf("//: ");
-		scanf("%s", userInput);
+		scanf(" %s", userInput);
 		if(!(strcmp(userInput, "exit") * strcmp(userInput, "Exit"))) break;
 	
 		switch(atoi(userInput)){
